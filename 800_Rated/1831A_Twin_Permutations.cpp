@@ -2,10 +2,15 @@
 using namespace std;
 
 void solve(){
-    long long n,k;
-    cin >> n >> k;
-    if(n % 2 == 0 || (n - k) % 2 == 0) cout << "YES\n"; 
-    else cout << "NO\n";
+    int n;
+    cin >> n;
+    for (int i = 0; i < n; i++)
+    {
+        int x;
+        cin >> x;
+        cout << n + 1 - x << " ";
+    }
+    cout << endl;
 }
 
 int main(){
