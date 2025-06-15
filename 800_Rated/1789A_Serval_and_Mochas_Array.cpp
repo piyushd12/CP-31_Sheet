@@ -6,14 +6,15 @@ void solve(){
     cin >> n;
     vector<int> v(n);
     for(int& i : v) cin >> i;
-    sort(v.begin(),v.end());
-    if(v[0] == v[n-1]) cout << "NO\n";
-    else{
-        cout << "YES\n";
-        cout << v[n-1] << " ";
-        for(int i=0;i<n-1;i++) cout << v[i] << " ";
-        cout << endl;
+    for(int i=0;i<n;i++){
+        for(int j=i+1;j<n;j++){
+            if(__gcd(v[i],v[j]) <= 2){
+                cout << "YES\n";
+                return;
+            }
+        }
     }
+    cout << "NO\n";
 }
 
 int main(){
