@@ -21,7 +21,7 @@ int main(){
     cin.tie(0);
 
     int t;
-    cin >> t;
+    cin >> t;   
     while(t--){
         solve();
     }
