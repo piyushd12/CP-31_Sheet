@@ -6,18 +6,18 @@ void solve(){
     cin >> n;
     vector<int> v(n);
     for(int& i : v) cin >> i;
-    long long cnt = 0;
+    long long ops = 0;
     for(int i=n-1;i>0;i--){
-        while(v[i-1] > 0 && v[i] <= v[i-1]){
-            v[i-1] /= 2;
-            cnt++;
-        }
         if(v[i] == 0){
             cout << -1 << endl;
             return;
         }
+        while(v[i] <= v[i-1]){
+            v[i-1] /= 2;
+            ops++;
+        }
     }
-    cout << cnt << endl;
+    cout << ops << endl;
 }
 
 int main(){
