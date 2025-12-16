@@ -12,7 +12,6 @@ def solve():
         print(-1)
     else:
         print(threes + (threes - twos))
-
     return
 
 def main():
